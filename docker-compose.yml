@@ -1,0 +1,30 @@
+version: '2.1'
+services:
+  algebra-todoapp-backend:
+    restart: "unless-stopped"
+    image: mike6715b/algebra-todoapp-backend
+    networks:
+      - proxy
+      - mongodb
+    ports:
+      - "3000:3000"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.algebra-todoapp.entrypoints=http"
+      - "traefik.http.routers.algebra-todoapp.rule=Host(`algebra-todoapp.brehak.com`)"
+      - "traefik.http.middlewares.algebra-todoapp-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.algebra-todoapp.middlewares=algebra-todoapp-https-redirect"
+      - "traefik.http.routers.algebra-todoapp-secure.entrypoints=https"
+      - "traefik.http.routers.algebra-todoapp-secure.rule=Host(`algebra-todoapp.brehak.com`)"
+      - "traefik.http.routers.algebra-todoapp-secure.tls=true"
+      - "traefik.http.routers.algebra-todoapp-secure.tls.certresolver=cloudflare"
+      - "traefik.http.routers.algebra-todoapp-secure.service=algebra-todoapp"
+      - "traefik.http.services.algebra-todoapp.loadbalancer.server.port=3000"
+      - "traefik.docker.network=proxy"
+
+networks:
+  proxy:
+    external: true
+  mongodb:
+    name: mongodb_default
+    external: true
