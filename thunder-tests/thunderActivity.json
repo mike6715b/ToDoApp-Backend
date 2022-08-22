@@ -1,0 +1,145 @@
+[
+  {
+    "_id": "62838a7b-7219-439d-a7f7-b08be421b3b2",
+    "colId": "history",
+    "containerId": "",
+    "name": "Register",
+    "url": "http://localhost:3000/api/auth/register",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-08-22T18:05:30.208Z",
+    "modified": "2022-08-22T18:29:11.832Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"username\": \"mike6715b\",\n  \"password\": \"z729nGYHSK\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "d359b050-2dcd-4c46-8435-3bc05271cf95",
+    "colId": "history",
+    "containerId": "",
+    "name": "Login",
+    "url": "http://localhost:3000/api/auth/login",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-08-22T18:05:30.208Z",
+    "modified": "2022-08-22T18:43:40.286Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"username\": \"mike6715b\",\n  \"password\": \"z729nGYHSK\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "d0618d0f-d667-4fa9-946c-3bab8d3e1c10",
+    "colId": "history",
+    "containerId": "",
+    "name": "Get All Todos",
+    "url": "http://localhost:3000/api/todos",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-08-22T18:26:04.667Z",
+    "modified": "2022-08-22T19:01:24.035Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJydW5vLnJlaGFrQGdtYWlsLmNvbSIsImlhdCI6MTY2MTE5MjgxNn0.JfFzYjawjZstYbpqHKTmjV69F5BfzyTYCv9bu-4qVWU"
+    },
+    "tests": []
+  },
+  {
+    "_id": "f993de97-be7f-4cf3-aa45-da65a0464b92",
+    "colId": "history",
+    "containerId": "",
+    "name": "Get Own Todos",
+    "url": "http://localhost:3000/api/todoown",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-08-22T18:26:04.667Z",
+    "modified": "2022-08-22T18:29:47.160Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJydW5vLnJlaGFrQGdtYWlsLmNvbSIsImlhdCI6MTY2MTE5MjgxNn0.JfFzYjawjZstYbpqHKTmjV69F5BfzyTYCv9bu-4qVWU"
+    },
+    "tests": []
+  },
+  {
+    "_id": "67fdbcab-21c6-462b-9467-6b5d0b32f374",
+    "colId": "history",
+    "containerId": "",
+    "name": "Get Users Todos",
+    "url": "http://localhost:3000/api/todouser",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-08-22T18:26:04.667Z",
+    "modified": "2022-08-22T18:39:45.440Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"username\": \"mike6715b\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJydW5vLnJlaGFrQGdtYWlsLmNvbSIsImlhdCI6MTY2MTE5MjgxNn0.JfFzYjawjZstYbpqHKTmjV69F5BfzyTYCv9bu-4qVWU"
+    },
+    "tests": []
+  },
+  {
+    "_id": "e44d069b-cb05-4f3c-b30f-d5cc6bc76728",
+    "colId": "history",
+    "containerId": "",
+    "name": "Create Todo",
+    "url": "http://localhost:3000/api/todo",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-08-22T18:26:04.667Z",
+    "modified": "2022-08-22T18:57:52.130Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\": \"Moj naslov\",\n  \"content\": \"Moj sadrzaj todo itema\",\n  \"status\": \"active\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pa2U2NzE1YiIsImlhdCI6MTY2MTE5MzgyMH0.2kVwoPoW7YTtXOnsv0G7cA66gZ1qi5CgOlrLXqeHoOM"
+    },
+    "tests": []
+  },
+  {
+    "_id": "40255824-4c7a-4c25-bc42-c552132bcbb9",
+    "colId": "history",
+    "containerId": "",
+    "name": "Update Todo",
+    "url": "http://localhost:3000/api/todo",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2022-08-22T18:26:04.667Z",
+    "modified": "2022-08-22T19:17:08.112Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"id\": \"6303d12807c4366e9b029f86\",\n  \"title\": \"Moj naslov 2\",\n  \"content\": \"Moj sadrzaj todo itema\",\n  \"status\": \"active\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pa2U2NzE1YiIsImlhdCI6MTY2MTE5MzgyMH0.2kVwoPoW7YTtXOnsv0G7cA66gZ1qi5CgOlrLXqeHoOM"
+    },
+    "tests": []
+  }
+]
