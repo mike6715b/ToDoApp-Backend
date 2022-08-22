@@ -46,7 +46,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-08-22T18:26:04.667Z",
-    "modified": "2022-08-22T19:01:24.035Z",
+    "modified": "2022-08-22T19:50:10.228Z",
     "headers": [],
     "params": [],
     "auth": {
@@ -105,7 +105,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-08-22T18:26:04.667Z",
-    "modified": "2022-08-22T18:57:52.130Z",
+    "modified": "2022-08-22T19:46:56.216Z",
     "headers": [],
     "params": [],
     "body": {
@@ -128,12 +128,35 @@
     "method": "PUT",
     "sortNum": 0,
     "created": "2022-08-22T18:26:04.667Z",
-    "modified": "2022-08-22T19:17:08.112Z",
+    "modified": "2022-08-22T19:49:51.219Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"id\": \"6303d12807c4366e9b029f86\",\n  \"title\": \"Moj naslov 2\",\n  \"content\": \"Moj sadrzaj todo itema\",\n  \"status\": \"active\"\n}",
+      "raw": "{\n  \"id\": \"6303dd30d69d848ea1035d2b\",\n  \"title\": \"Moj naslov 105\",\n  \"content\": \"Moj sadrzaj todo\",\n  \"status\": \"active\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pa2U2NzE1YiIsImlhdCI6MTY2MTE5MzgyMH0.2kVwoPoW7YTtXOnsv0G7cA66gZ1qi5CgOlrLXqeHoOM"
+    },
+    "tests": []
+  },
+  {
+    "_id": "78a03f72-1e9f-48f0-bf27-1b37af56196a",
+    "colId": "history",
+    "containerId": "",
+    "name": "Delete Todo",
+    "url": "http://localhost:3000/api/todo",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2022-08-22T18:26:04.667Z",
+    "modified": "2022-08-22T19:50:14.722Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"id\": \"6303dd30d69d848ea1035d2b\"\n}",
       "form": []
     },
     "auth": {

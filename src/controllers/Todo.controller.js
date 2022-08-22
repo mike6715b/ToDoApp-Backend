@@ -74,12 +74,10 @@ class TodoController {
   }
 
   static async UpdateTodo(req, res) {
-    const id = req.params.id;
+    const id = req.body.id;
     const { title, content, status } = req.body;
     const username = res.locals.jwtPayload.username;
-    const foundTodo = await Todo.findById({
-      id: mongoose.Types.ObjectId(req.params.id),
-    }).exec();
+    let foundTodo = await Todo.findOne({ id }).exec();
     if (!foundTodo) {
       return res.status(404).send({
         error: "Todo not found",
@@ -90,24 +88,21 @@ class TodoController {
         error: "Forbidden",
       });
     } else {
-      await Todo.findByIdAndUpdate(
-        id,
-        { title, content, status },
-        (err, todo) => {
-          if (err) {
-            res.status(500).send({ err });
-          } else {
-            res.status(201).json({ todo });
-          }
-        }
-      );
+      await Todo.findByIdAndUpdate(id, {
+        title,
+        content,
+        status,
+      }).exec();
+      foundTodo = await Todo.findOne({ id }).exec();
+      return res.status(201).json({ foundTodo });
     }
   }
 
   static async DeleteTodo(req, res) {
-    const id = req.params.id;
+    const id = req.body.id;
     const username = res.locals.jwtPayload.username;
-    const foundTodo = await Todo.findById(id);
+    const foundTodo = await Todo.findById(id).exec();
+    console.log({ foundTodo });
     if (!foundTodo) {
       res.status(404).send({
         error: "Todo not found",
@@ -118,12 +113,8 @@ class TodoController {
         error: "Forbidden",
       });
     } else {
-      await Todo.findByIdAndDelete(id, (err, todo) => {
-        if (err) {
-          res.status(500).send({ err });
-        } else {
-          res.status(201);
-        }
+      const y = await Todo.findByIdAndDelete(id).then(() => {
+        res.status(200).json();
       });
     }
   }
