@@ -8,7 +8,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-08-22T18:05:30.208Z",
-    "modified": "2022-08-22T18:29:11.832Z",
+    "modified": "2022-08-22T20:31:16.975Z",
     "headers": [],
     "params": [],
     "body": {
@@ -23,11 +23,11 @@
     "colId": "history",
     "containerId": "",
     "name": "Login",
-    "url": "http://localhost:3000/api/auth/login",
+    "url": "https://algebra-todoapp.brehak.com/api/auth/login",
     "method": "POST",
     "sortNum": 0,
     "created": "2022-08-22T18:05:30.208Z",
-    "modified": "2022-08-22T18:43:40.286Z",
+    "modified": "2022-08-23T19:20:49.584Z",
     "headers": [],
     "params": [],
     "body": {
@@ -42,16 +42,16 @@
     "colId": "history",
     "containerId": "",
     "name": "Get All Todos",
-    "url": "http://localhost:3000/api/todos",
+    "url": "https://algebra-todoapp.brehak.com/api/todos",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-08-22T18:26:04.667Z",
-    "modified": "2022-08-22T19:50:10.228Z",
+    "modified": "2022-08-23T19:23:02.882Z",
     "headers": [],
     "params": [],
     "auth": {
       "type": "bearer",
-      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJydW5vLnJlaGFrQGdtYWlsLmNvbSIsImlhdCI6MTY2MTE5MjgxNn0.JfFzYjawjZstYbpqHKTmjV69F5BfzyTYCv9bu-4qVWU"
+      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pa2U2NzE1YiIsImlhdCI6MTY2MTI4MjQ0OSwiZXhwIjoxNjYxMjg2MDQ5fQ.hfuyVSIlmOyFdJAP2b0PZ4QwB_p9SjYceyvfYNpAZGk"
     },
     "tests": []
   },
@@ -101,21 +101,21 @@
     "colId": "history",
     "containerId": "",
     "name": "Create Todo",
-    "url": "http://localhost:3000/api/todo",
+    "url": "https://algebra-todoapp.brehak.com/api/todo",
     "method": "POST",
     "sortNum": 0,
     "created": "2022-08-22T18:26:04.667Z",
-    "modified": "2022-08-22T19:46:56.216Z",
+    "modified": "2022-08-23T19:25:05.641Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"title\": \"Moj naslov\",\n  \"content\": \"Moj sadrzaj todo itema\",\n  \"status\": \"active\"\n}",
+      "raw": "{\n  \"title\": \"Banana\",\n  \"content\": \"Uistinu, banana!\"\n}",
       "form": []
     },
     "auth": {
       "type": "bearer",
-      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pa2U2NzE1YiIsImlhdCI6MTY2MTE5MzgyMH0.2kVwoPoW7YTtXOnsv0G7cA66gZ1qi5CgOlrLXqeHoOM"
+      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pa2U2NzE1YiIsImlhdCI6MTY2MTI4MjQ0OSwiZXhwIjoxNjYxMjg2MDQ5fQ.hfuyVSIlmOyFdJAP2b0PZ4QwB_p9SjYceyvfYNpAZGk"
     },
     "tests": []
   },

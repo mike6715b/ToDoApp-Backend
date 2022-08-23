@@ -60,7 +60,7 @@ class AuthController {
     //Check if email is unique
     if (await User.findOne({ username })) {
       return res.status(400).json({
-        error: "Email already exists",
+        error: "Username already exists",
       });
     }
 
