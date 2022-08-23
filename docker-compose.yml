@@ -26,5 +26,5 @@ networks:
   proxy:
     external: true
   mongodb:
-    name: mongodb_default
+    name: mongodb
     external: true

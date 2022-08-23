@@ -6,6 +6,7 @@ import { mongoose } from "mongoose";
 import helmet from "helmet";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import morgan from "morgan"
 
 import authRouter from "./routes/auth.route.js";
 import todoRouter from "./routes/todo.route.js";
@@ -34,6 +35,7 @@ app.use(helmet()); // helmet is a security package that helps you secure your Ex
 app.use(cors(corsOptions)); // cors is a middleware that allows cross-origin requests.
 app.use(Express.json()); //parse JSON bodies
 app.use(cookieParser()); //parse cookies
+app.use(morgan('tiny'));
 
 app.use("/api/auth", authRouter);
 app.use("/api/", todoRouter);
