@@ -42,6 +42,7 @@ class AuthController {
     //Send response
     return res.status(201).json({
       message: "Logged in successfully",
+      username: user.username,
       token,
     });
   };
@@ -88,6 +89,7 @@ class AuthController {
     //Send response
     return res.status(201).json({
       message: "User created successfully",
+      username,
       token,
     });
   };
