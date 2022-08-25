@@ -32,7 +32,7 @@ const putTodoSchema = Joi.object({
   id: Joi.string().required(),
   title: Joi.string().required(),
   content: Joi.string().required(),
-  status: Joi.string().required(),
+  status: Joi.boolean().required(),
 });
 todoRouter.put(
   "/todo",
@@ -43,7 +43,7 @@ todoRouter.put(
 const postTodoSchema = Joi.object({
   title: Joi.string().required(),
   content: Joi.string().required(),
-  status: Joi.string().required(),
+  status: Joi.boolean().required(),
 });
 todoRouter.post(
   "/todo",

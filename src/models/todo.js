@@ -9,7 +9,7 @@ const todoSchema = new Schema(
     created_by_username: { type: String, required: true },
     title: { type: String, required: true },
     content: { type: String, required: true },
-    status: { type: String, required: true },
+    status: { type: Boolean, required: true },
   },
   { timestamps: true }
 );
