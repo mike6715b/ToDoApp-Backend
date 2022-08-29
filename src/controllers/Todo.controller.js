@@ -111,7 +111,7 @@ class TodoController {
         content,
         status,
       }).exec();
-      let todo = await Todo.findOne({ id }).exec();
+      let todo = await Todo.findById({ id }).exec();
       return res.status(201).json({ todo });
     }
   }
