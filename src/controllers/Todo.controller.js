@@ -8,7 +8,7 @@ class TodoController {
       if (err) {
         res.status(500).send({ err });
       } else {
-        res.status(200).json({ todos });
+        res.status(200).json({ todos, all: true });
       }
     });
   }
@@ -23,7 +23,7 @@ class TodoController {
       if (err) {
         res.status(500).send({ err });
       } else {
-        res.status(200).json({ todos });
+        res.status(200).json({ todos, all: false });
       }
     }).sort({ created_at: -1 });
   }
@@ -34,7 +34,7 @@ class TodoController {
       if (err) {
         res.status(500).send({ err });
       } else {
-        res.status(200).json({ todos });
+        res.status(200).json({ todos, all: false });
       }
     }).sort({ created_at: -1 });
   }
