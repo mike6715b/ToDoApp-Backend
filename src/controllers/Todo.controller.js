@@ -75,7 +75,6 @@ class TodoController {
 
   static async UpdateTodo(req, res) {
     const id = req.body.id;
-    console.log(`Update Todo with id: ${id}`);
     const { title, content, status } = req.body;
     const username = res.locals.jwtPayload.username;
     let foundTodo = await Todo.findOne({ id }).exec();
