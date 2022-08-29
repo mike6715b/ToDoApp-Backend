@@ -88,13 +88,21 @@ class TodoController {
         error: "Forbidden",
       });
     } else {
-      await Todo.findByIdAndUpdate(id, {
-        title,
-        content,
-        status,
-      }).exec();
-      foundTodo = await Todo.findOne({ id }).exec();
-      return res.status(201).json({ foundTodo });
+      Todo.findByIdAndUpdate(
+        id,
+        {
+          title,
+          content,
+          status,
+        },
+        (err, todo) => {
+          if (err) {
+            res.status(500).send({ err });
+          } else {
+            res.status(200).json({ todo });
+          }
+        }
+      );
     }
   }
 
@@ -113,8 +121,12 @@ class TodoController {
         error: "Forbidden",
       });
     } else {
-      const y = await Todo.findByIdAndDelete(id).then(() => {
-        res.status(200).json();
+      Todo.findByIdAndDelete(id, (err, todo) => {
+        if (err) {
+          res.status(500).send({ err });
+        } else {
+          res.status(200).json({ todo });
+        }
       });
     }
   }
