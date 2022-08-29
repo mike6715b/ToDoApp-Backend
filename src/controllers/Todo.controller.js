@@ -91,21 +91,28 @@ class TodoController {
         err: "Forbidden",
       });
     } else {
-      Todo.findByIdAndUpdate(
-        id,
-        {
-          title,
-          content,
-          status,
-        },
-        (err, todo) => {
-          if (err) {
-            res.status(500).send({ err });
-          } else {
-            res.status(200).json({ todo });
-          }
-        }
-      );
+      // Todo.findByIdAndUpdate(
+      //   id,
+      //   {
+      //     title,
+      //     content,
+      //     status,
+      //   },
+      //   (err, todo) => {
+      //     if (err) {
+      //       res.status(500).send({ err });
+      //     } else {
+      //       res.status(200).json({ todo });
+      //     }
+      //   }
+      // );
+      await Todo.findByIdAndUpdate(id, {
+        title,
+        content,
+        status,
+      }).exec();
+      let todo = await Todo.findOne({ id }).exec();
+      return res.status(201).json({ todo });
     }
   }
 
