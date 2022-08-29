@@ -84,8 +84,11 @@ class TodoController {
       });
     }
     if (foundTodo.created_by_username !== username) {
+      console.log(
+        `Forbidden. Not same user! TodoUser: ${foundTodo.created_by_username} User: ${username}`
+      );
       res.status(403).send({
-        error: "Forbidden",
+        err: "Forbidden",
       });
     } else {
       Todo.findByIdAndUpdate(

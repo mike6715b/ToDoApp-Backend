@@ -12,7 +12,7 @@ export const verifyJWT = (req, res, next) => {
       res.locals.jwtPayload = jwtPayload;
       next();
     } catch (error) {
-      console.log(`Ivalid JWT token: ${error}`);
+      console.log(`Ivalid JWT token: ${jwtPayload}`);
       res.status(403).json({
         error: "Forbidden",
       });
