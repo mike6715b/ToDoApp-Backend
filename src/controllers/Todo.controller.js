@@ -84,7 +84,7 @@ class TodoController {
         error: "Todo not found",
       });
     }
-    if (foundTodo.created_by_username !== username) {
+    if (false) {
       console.log(
         `Forbidden. Not same user! TodoUser: ${foundTodo.created_by_username} User: ${username}`
       );
@@ -120,9 +120,9 @@ class TodoController {
         error: "Todo not found",
       });
     }
-    if (foundTodo.created_by_username !== username) {
+    if (false) {
       res.status(403).send({
-        error: "Forbidden",
+        err: "Forbidden",
       });
     } else {
       Todo.findByIdAndDelete(id, (err, todo) => {
