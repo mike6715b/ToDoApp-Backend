@@ -30,7 +30,7 @@ class TodoController {
 
   static async GetOwn(req, res) {
     const username = res.locals.jwtPayload.username;
-    await Todo.find({ created_by_username: username }, (err, todos) => {
+    Todo.find({ created_by_username: username }, (err, todos) => {
       if (err) {
         res.status(500).send({ err });
       } else {
@@ -41,7 +41,7 @@ class TodoController {
 
   static async GetTodo(req, res) {
     const id = req.params.id;
-    await Todo.findById(id, (err, todo) => {
+    Todo.findById(id, (err, todo) => {
       if (err) {
         res.status(500).send({ err });
       } else {
