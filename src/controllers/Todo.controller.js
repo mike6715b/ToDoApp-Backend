@@ -77,7 +77,7 @@ class TodoController {
     const id = req.body.id;
     const { title, content, status } = req.body;
     const username = res.locals.jwtPayload.username;
-    let foundTodo = await Todo.findOne({ id }).exec();
+    let foundTodo = await Todo.findById({ id }).exec();
     if (!foundTodo) {
       return res.status(404).send({
         error: "Todo not found",
