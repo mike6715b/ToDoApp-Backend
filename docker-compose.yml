@@ -6,8 +6,6 @@ services:
     networks:
       - proxy
       - mongodb
-    ports:
-      - "3000:3000"
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.algebra-todoapp.entrypoints=http"
